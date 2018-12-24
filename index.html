@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/24/“Markdown基础语法学习笔记“/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/24/Markdown基础语法学习笔记/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/24/“Markdown基础语法学习笔记“/" itemprop="url">“Markdown基础语法学习笔记”</a></h1>
+                <a class="post-title-link" href="/2018/12/24/Markdown基础语法学习笔记/" itemprop="url">Markdown基础语法学习笔记</a></h1>
         
 
         <div class="post-meta">
@@ -260,7 +260,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-24T20:36:45+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-24T22:41:56+08:00">
                 2018-12-24
               </time>
             
@@ -300,21 +300,27 @@
       
         
           
-            <p>**说明：这是我学习markdown的笔记，内容来自<a href="https://www.jianshu.com/p/191d1e21f7ed" title="简书" target="_blank" rel="noopener">简书</a>。</p>
-<p>##一、标题<br>一个#是一个标题，二个#是二号标题，以此类推。一共支持六级标题。</p>
+            <p><strong>说明：这是我学习markdown的笔记，原始内容来自<a href="https://www.jianshu.com/p/191d1e21f7ed" title="简书" target="_blank" rel="noopener">简书</a>。</strong></p>
+<p>##一、标题<br>一个#是一个标题，二个#是二号标题，以此类推。共支持六级标题。</p>
 <hr>
 <p>##二、字体</p>
 <p>###（一）加粗<br>要加粗的文字左右分别用两个*包起来。比如：</p>
+<p><code>**我要加粗这段话！**</code></p>
 <p><strong>我要加粗这段话！</strong></p>
 <p>###（二）倾斜<br>要倾斜的文字左右分别用一个*包起来。比如：</p>
+<p><code>*我要这段话倾斜。*</code></p>
 <p><em>我要这段话倾斜。</em></p>
 <p>###（三）斜体加粗<br>要倾斜和加粗的文字左右分别用三个*包起来。比如：</p>
+<p><code>***我要倾斜加粗这段话！***</code></p>
 <p><strong><em>我要倾斜加粗这段话！</em></strong></p>
 <p>###（四）删除线<br>要加删除线的文字左右分别用两个~~号包起来。比如：</p>
+<p><code>~~这是加删除线的文字~~</code></p>
 <p><del>这是加删除线的文字</del></p>
-<p><strong>（不知道这个删除线怎么实现不了）</strong></p>
+<p><strong>注：删除线在MarkdownPad2里面看不见效果，但是传上来之后可以实现。</strong></p>
 <hr>
-<p>#三、引用<br>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;n个…<br>貌似可以一直加下去。<br><strong>示例：</strong>  <em>（发现引用要另起一行才有用）</em></p>
+<p>#三、引用<br>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;n个…貌似可以一直加下去。</p>
+<p><strong>示例：</strong>  <em>（发现引用要另起一行才有用）</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt;这是一级引用内容  </span><br><span class="line">&gt;&gt;这是二级引用内容</span><br><span class="line">&gt;&gt;&gt;这是三级引用内容</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;加几个&gt;就是几级引用</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>这是一级引用内容  </p>
 <blockquote>
@@ -340,23 +346,29 @@
 </blockquote>
 </blockquote>
 <hr>
-<p>#四、分割线<br>三个或者三个以上的-或者*都可以。如下：</p>
+<p>#四、分割线</p>
+<p>三个或者三个以上的-或者*都可以。如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---</span><br><span class="line">------</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line"></span><br><span class="line">`</span><br></pre></td></tr></table></figure>
 <hr>
 <hr>
 <hr>
 <hr>
 <p>#五、图片</p>
-<p><img src="图片地址" alt="图片alt" title="图片title"></p>
+<p><code>![图片alt](图片地址 &quot;图片title&quot;)</code></p>
 <p>*图片alt就是显示在图片下面的文字，相当于图注。<br>图片title就是图片的标题，当鼠标移到图片上显示的内容。title可加可不加。</p>
-<p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg" alt="blockchain" title="区块链"></p>
+<p><code>![blockchain](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg &quot;区块链&quot;)</code></p>
 <p>如果上传本地的图片点击导航栏的图片标志即可。若采用的Markdownpad，就是<strong><em>insert-image</em></strong>。或者快捷键<strong><em>ctrl+G</em></strong>。</p>
 <hr>
-<p>#六、超链接<br><a href="超链接地址" title="超链接title">超链接名</a><br>title可加可不加。如下：<br><a href="http://mudaozi.github.io" target="_blank" rel="noopener">我的个人博客主页</a></p>
-<p>也可以采用下面这种方式添加超链接：<br><a href="超链接地址" target="_blank">超链接名</a></p>
+<p>#六、超链接</p>
+<p><code>[超链接名](超链接地址 &quot;超链接title&quot;)</code></p>
+<p>title可加可不加。如下：</p>
+<p><code>[我的个人博客主页](http://mudaozi.github.io)</code></p>
+<p>也可以采用下面这种方式添加超链接：</p>
+<p><code>&lt;a href=&quot;超链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt;</code></p>
 <p><em>注：Markdown本身语法不支持链接在新页面中打开，貌似简书做了处理，是可以的。别的平台可能就不行了，如果想要在新页面中打开的话可以用html语言的a标签代替。</em></p>
 <hr>
 <p>#七、列表</p>
-<p>###（一）无序列表<br>无序列表用-+<em>任何一种都可以。但是- + </em> 跟内容之间都要有一个空格。（好像要与上一行空一行）</p>
+<p>###（一）无序列表<br>无序列表用 - + <em> 任何一种都可以。但是 </em>- + * 跟内容之间都要有一个空格。</p>
 <ul>
 <li>列表内容</li>
 </ul>
@@ -393,7 +405,12 @@
 <p>#九、代码<br><strong>单行代码</strong>之间分别用一个反引号包起来。如下：</p>
 <p><code>代码内容</code></p>
 <p><strong>代码块</strong>：代码之间分别用三个反引号包起来，且两边的反引号单独占一行。如下：</p>
-<p>(<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">    代码...</span><br><span class="line"></span><br><span class="line">    代码...</span><br><span class="line"></span><br><span class="line">    代码...</span><br><span class="line"></span><br><span class="line">(```)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(&apos;&apos;&apos;)</span><br><span class="line"></span><br><span class="line">	function fun()&#123;</span><br><span class="line">	</span><br><span class="line">	     echo &quot;这是一句非常牛逼的代码&quot;;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">	fun();</span><br><span class="line"></span><br><span class="line">(&apos;&apos;&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*注：为了防止转译，前后三个反引号处加了小括号，实际是没有的。这里只是用来演示，实际中去掉两边小括号即可。*</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">#十、流程图(这个还需要再摸索摸索......）</span><br><span class="line">```flow</span><br><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">代码...</span><br><span class="line"></span><br><span class="line">代码...</span><br><span class="line"></span><br><span class="line">代码...</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function fun()&#123;</span><br><span class="line"></span><br><span class="line">     echo &quot;这是一句非常牛逼的代码&quot;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure>
+<p><em>注：为了防止转译，前后三个反引号处加了小括号，实际是没有的。这里只是用来演示，实际中去掉两边小括号即可。</em></p>
+<hr>
+<p>#十、流程图(这个还需要再摸索摸索……）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;</span><br></pre></td></tr></table></figure>
 <hr>
 <p>##其他</p>
 <p>###小发现：</p>
@@ -748,6 +765,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
