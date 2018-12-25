@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Stata,">
 
 
 
@@ -79,17 +79,22 @@
 
 
 
-<meta name="description" content="This is a test page!">
+<meta name="description" content="继续学习连玉君老师寒假班讲义,基础部分中基础命令和操作。 相关系数矩阵 12345678sysuse auto,clearpwcorr price wei len mpg  //官方命令pwcorr_a price wei len mpg  //连老师自编，可以带星号graph matrix price wei len mpg //相关系数矩阵（散点图） 直方图和密度函数图 12345678910">
+<meta name="keywords" content="Stata">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello,mudaozi!">
-<meta property="og:url" content="http://yoursite.com/2018/12/24/Hello-mudaozi/index.html">
+<meta property="og:title" content="连玉君2018年寒假班讲义基础部分笔记（二）">
+<meta property="og:url" content="http://yoursite.com/2018/12/25/连玉君2018年寒假班讲义学习笔记（二）/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="This is a test page!">
+<meta property="og:description" content="继续学习连玉君老师寒假班讲义,基础部分中基础命令和操作。 相关系数矩阵 12345678sysuse auto,clearpwcorr price wei len mpg  //官方命令pwcorr_a price wei len mpg  //连老师自编，可以带星号graph matrix price wei len mpg //相关系数矩阵（散点图） 直方图和密度函数图 12345678910">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-23T23:43:07.686Z">
+<meta property="og:image" content="https://i.imgur.com/jGzFRl9.png">
+<meta property="og:image" content="https://i.imgur.com/mashAGO.jpg">
+<meta property="og:image" content="https://i.imgur.com/iD7m7Zs.jpg">
+<meta property="og:updated_time" content="2018-12-25T15:59:26.883Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello,mudaozi!">
-<meta name="twitter:description" content="This is a test page!">
+<meta name="twitter:title" content="连玉君2018年寒假班讲义基础部分笔记（二）">
+<meta name="twitter:description" content="继续学习连玉君老师寒假班讲义,基础部分中基础命令和操作。 相关系数矩阵 12345678sysuse auto,clearpwcorr price wei len mpg  //官方命令pwcorr_a price wei len mpg  //连老师自编，可以带星号graph matrix price wei len mpg //相关系数矩阵（散点图） 直方图和密度函数图 12345678910">
+<meta name="twitter:image" content="https://i.imgur.com/jGzFRl9.png">
 
 
 
@@ -119,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/24/Hello-mudaozi/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/25/连玉君2018年寒假班讲义学习笔记（二）/">
 
 
 
 
 
-  <title>Hello,mudaozi! | Hexo</title>
+  <title>连玉君2018年寒假班讲义基础部分笔记（二） | Hexo</title>
   
 
 
@@ -232,7 +237,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/24/Hello-mudaozi/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/25/连玉君2018年寒假班讲义学习笔记（二）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -249,7 +254,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello,mudaozi!</h1>
+          <h1 class="post-title" itemprop="name headline">连玉君2018年寒假班讲义基础部分笔记（二）</h1>
         
 
         <div class="post-meta">
@@ -261,8 +266,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-24T07:42:45+08:00">
-                2018-12-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-25T23:53:51+08:00">
+                2018-12-25
               </time>
             
 
@@ -299,7 +304,26 @@
       
 
       
-        <p>This is a test page!</p>
+        <p><em>继续学习连玉君老师寒假班讲义,基础部分中基础命令和操作。</em></p>
+<p><strong>相关系数矩阵</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sysuse auto,clear</span><br><span class="line"></span><br><span class="line">pwcorr price wei len mpg  //官方命令</span><br><span class="line"></span><br><span class="line">pwcorr_a price wei len mpg  //连老师自编，可以带星号</span><br><span class="line"></span><br><span class="line">graph matrix price wei len mpg //相关系数矩阵（散点图）</span><br></pre></td></tr></table></figure>
+<p><strong>直方图和密度函数图</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sysuse auto,clear</span><br><span class="line"></span><br><span class="line">histogram price  //直方图</span><br><span class="line"></span><br><span class="line">kdensity price //核密度函数图</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*绘制两条核密度曲线</span><br><span class="line"></span><br><span class="line">twoway (kdensity price in foreign == 1)  ///</span><br><span class="line"></span><br><span class="line">(kdensity price if forgein == 0),  ///</span><br><span class="line"></span><br><span class="line">legend(label(1 &quot;Foreign&quot;) label(2 &quot;Domestic&quot;))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ssc install mkdensity  //外部命令，绘制多变量核密度曲线</span><br><span class="line"></span><br><span class="line">mkdensity price,over(foreign)  //实现和上面一样的效果</span><br><span class="line"></span><br><span class="line">scatter price weight //散点图</span><br><span class="line"></span><br><span class="line">twoway (sactter price weigh)(lfit price weight) //散点图+线性拟合图</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/jGzFRl9.png" alt="散点图+线性拟合图" title="散点图+线性拟合图"></p>
+<p>可以通过散点图+线性拟合图的绘制总结Stata中两种图形叠加的绘制方法。 <code>help graph twoway</code></p>
+<p><strong>类变量列表分析</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sysuse auto,clear</span><br><span class="line"></span><br><span class="line">count if price &gt; 10000  //计数</span><br><span class="line"></span><br><span class="line">tab foreign  //列表呈现频数</span><br><span class="line"></span><br><span class="line">tab foreign rep78 //二维列表，显示频数</span><br><span class="line"></span><br><span class="line">*help tab </span><br><span class="line"></span><br><span class="line">tab foreign rep78,sum(price) //默认显示均值、标准差和频数</span><br><span class="line"></span><br><span class="line">tab foreign rep78, sum(price) mean //只显示均值</span><br></pre></td></tr></table></figure>
+<p><strong>均值差异检验</strong></p>
+<p><code>ttest price,by(foreign)</code></p>
+<p>可以使用连老师推荐的<code>ttable2</code>命令。</p>
+<p><code>ssc install ttable2</code></p>
+<p>可以使用<code>which</code>查看命令的储存地址和版本信息。使用<code>viewsource</code>命令查看ado文档的源码，将.ado的源码复制进新的do文档，加以修改就可以为我所用，在他人的基础上进行改进，而且常看源码对使用Stata编程的能力也大有裨益。</p>
+<p><code>which ttable2</code></p>
+<p><img src="https://i.imgur.com/mashAGO.jpg" alt="ttable2命令信息"></p>
+<p><code>viewsource ttable2.ado</code></p>
+<p><img src="https://i.imgur.com/iD7m7Zs.jpg" alt="ttable2命令部分源代码"></p>
+<p><strong>变量名称和修改观察值</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">lookfor &quot;Repair&quot;  //搜索（变量和标签中）包含特定关键词的变量名</span><br><span class="line"></span><br><span class="line">rename weight wei //单个变量名更名</span><br><span class="line"></span><br><span class="line">rename (length gear_ratio)(len gear) //批量重命名</span><br><span class="line"></span><br><span class="line">ssc install renvars //外部命令，批量重命名更强大</span><br><span class="line"></span><br><span class="line">usepackage renvars,update  //安装或更新外部命令</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -315,6 +339,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Stata/" rel="tag"># Stata</a>
+          
+        </div>
+      
 
       
       
@@ -324,8 +354,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/24/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/12/24/连玉君2018年寒假班讲义基础部分笔记（一）/" rel="next" title="连玉君2018年寒假班讲义基础部分笔记（一）">
+                <i class="fa fa-chevron-left"></i> 连玉君2018年寒假班讲义基础部分笔记（一）
               </a>
             
           </div>
@@ -333,10 +363,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/24/Markdown基础语法学习笔记/" rel="prev" title="Markdown基础语法学习笔记">
-                Markdown基础语法学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
