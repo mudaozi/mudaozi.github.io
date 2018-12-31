@@ -229,6 +229,196 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/31/StudyNotes-Gentzkow-CodeAndData-1/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/31/StudyNotes-Gentzkow-CodeAndData-1/" itemprop="url">StudyNotes_Gentzkow_CodeAndData(1)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-31T22:08:05+08:00">
+                2018-12-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>这是 <em>Matthew Gentzkow</em>的<em>Code and Data for the Social Sciences:A Practitioner’s Guide</em> 的学习笔记，全书共有8节，介绍了实证分析中数据处理常见的问题和建议。</strong></p>
+<p>原书网盘地址：<a href="https://pan.baidu.com/s/1ceF0REHAi77D2oVdFHu-xA" title="原书地址" target="_blank" rel="noopener">链接</a> </p>
+<p>提取码：r6f2 </p>
+<p>#Chapter1  Introduction</p>
+<p>第一部分引言中，作者描述了数据处理中几种令人抓狂的情形：原文件地址变更导致代码报错、误删导致样本量过少、定义不明晰导致同代码结果相异、与研究助理代码交接混乱和代码管理不当拖慢研究进度等。</p>
+<p>在这部分，作者给出了一个思路：</p>
+<blockquote>
+<p>Here is a good rule of thumb: If you are trying to solve a problem, and there are multi-billion dollar firms whose entire business model depends on solving the same problem, and there are whole courses at your university devoted to how to solve that problem, you might want to figur out what the experts do and see if you can’t learn something from it.</p>
+</blockquote>
+<p>大致意思是说，你遇见的问题有很多公司致力于解决它们，网上也有许多公开课可以提供帮助，所以有问题可以先上网查询。就个人而言，<a href="https://bbs.pinggu.org/forum-67-1.html" title="人大经济论坛Stata专版" target="_blank" rel="noopener">人大经济论坛Stata专版</a>、连玉君老师的简书主页和微信公号<a href="https://www.jianshu.com/u/69a30474ef33" title="连享会主页" target="_blank" rel="noopener">连享会</a>和<strong>Stata连享会</strong>（微信号：StataChina）、<strong>计量经济圈</strong>（微信号：econometrics666）等其他渠道都可以寻求帮助。当然，最权威和官方的是通过 <em>help</em>查询官方的手册，可以更加系统的解决问题和学习。</p>
+<p><img src="https://i.imgur.com/PfVDN9y.jpg" alt="资料搜索"></p>
+<p>当然，多加一些交流群也是不错的学习方法，更好的和别人讨论，即使默默潜水也可以收获一些有用的信息。涉及到一些好的公众号、网页等学习渠道的推荐，待有时间梳理之后专门写一篇博客。</p>
+<p>#Chapter2 Automation</p>
+<p>本章主要介绍了<strong>自动化</strong>和<strong>脚本化</strong>两个原则，原文提供的两条原则如下：</p>
+<blockquote>
+<p><strong>Rules:</strong></p>
+<p>(A)Automate everything that can be automated.</p>
+<p>(B)Write a single script that executes all code from beginning to end. </p>
+</blockquote>
+<p>翻译成中文：</p>
+<p>1.将一切可以自动化的内容自动化。</p>
+<p>2.将所有代码从头至尾写在可运行的单一脚本。</p>
+<p>一开始，作者提出了美国电视机产量上升带动薯片销量上升的假设。然后，介绍了交互式操作两个最主要的弊端：<strong>一是可复制性差；二是低效率。</strong>最后，重点介绍了是如何通过自动化的方式使结果输出可复制。</p>
+<p>作者的操作环境是：<em>Excel</em>保存的原始数据，用<em>Stata</em>进行数据处理和分析，使用<em>Latex</em>进行排版。具体的操作方法如下：</p>
+<p>首先，通过<em>Stat/Transfer</em>软件或者<em>Stata</em>中的“import excel”命令将<em>.csv</em>文件转化为Stata版本的文件。将<em>.txt</em>转化为<em>.tex</em>文件。</p>
+<p>然后，添加一个<em>rundirectory.bat</em>的文件至当前路径。里面包含的内容如下图：<br><img src="https://i.imgur.com/7IBHjxj.jpg" alt="The contents of rundirectory "></p>
+<p><em>.bat</em>后缀的文件是Windows的shell脚本文件（<em>考虑其他操作系统环境，可以用Python写一个rundirectory.py文件，在其他系统的电脑也可以运行</em>），或者就通过<em>Stata</em>的<em>do-file</em>文件，它起到一个类似地图的作用，告诉系统怎样运行当前路径中的文件。</p>
+<p>#Chapter3 Version Control</p>
+<p>本章作者主要介绍了进行版本控制的原因和方法，原文提供的两条原则如下：</p>
+<blockquote>
+<p><strong>Rules:</strong></p>
+<p>(A)Store code and data under version control.</p>
+<p>(B)Run the whole directroy brefore checking it back in.</p>
+</blockquote>
+<p>翻译成中文，大致意思是：</p>
+<p>1.在版本控制下储存数据。</p>
+<p>2.检查之后再运行整个路径。</p>
+<blockquote>
+<p>There are good reasons to store multiple versions of the same file. The most obvious is that it<br>provides a quick way to roll back changes you want to discard. Another is that it facilitates com<br>parison.</p>
+</blockquote>
+<p>原文中如上介绍版本控制的好处，一是提供一种便捷的方式可以回顾想要丢弃的改变；二是便于对比。</p>
+<p>我们通常的做法是通过重命名，但是作者指出了这种方法是错误的：一是将每个文件重命名的过程很痛苦，二是稍有不慎发生疏忽就会带来文件使用上的疑惑。</p>
+<p><strong>那么作者建议怎么做呢？</strong>书中描述如下，作者建议采用版本控制的软件。</p>
+<blockquote>
+<p>Fortunately, your computer can take care of this for you,automatically, using free software that you can set up in a few minutes.</p>
+</blockquote>
+<p>紧接着，作者用了大量篇幅来讲述使用版本控制软件的优点，如书中所述，总结为一句话：“版本控制就像一切东西的撤回键”。</p>
+<blockquote>
+<p>Version control is like an undo command for everything.</p>
+</blockquote>
+<p><strong>具体如何做？</strong></p>
+<blockquote>
+<p>But for what it’s worth, we use a SubVersion repository that we interact with using the very nice <strong>TortoiseSVN</strong> browser for Windows. Comparable software exists for Macs. More recent version control methods like <strong>Git</strong> or <strong>BitBucket</strong> may be worth checking out. It will probably take you a couple days to set up a repository and learn how you want to interact with it. You will break even on that time investment within a month or two.</p>
+</blockquote>
+<p>这个颇受启发，后面进一步学习使用Git进行版本控制。</p>
+<p><a href="http://git.oschina.net/progit/" title="Pro Git（中文版）" target="_blank" rel="noopener">Pro Git（中文版）</a></p>
+<p>#Chapter4 Directory</p>
+<p>本章作者主要介绍路径（文件夹）的管理，作者建议采用模块化和函数式的方式来管理文件。文中提供的原则如下：</p>
+<blockquote>
+<p><strong>Rules:</strong></p>
+<p>(A)Separate directories by function.</p>
+<p>(B)Separate files into inputs and outputs.</p>
+<p>(C)Make directories portable.</p>
+</blockquote>
+<p>翻译成中文，大致意思是说：</p>
+<p>1.按用途区分文件目录（文件夹）。</p>
+<p>2.按输入和输出区分文件。</p>
+<p>3.让文件目录（文件夹）更加方便。</p>
+<p>这一章的主要思路用书中的两张图可以很好的理解，但是要实际操作，还需要养成习惯。</p>
+<p><img src="https://i.imgur.com/fQUVuiH.jpg" alt="一般的保存方式"></p>
+<p><img src="https://i.imgur.com/g2zbVMc.jpg" alt="作者建议的保存方式"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/31/Gentzkowow-CodeAndData-studynote-1/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -248,7 +438,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/31/Gentzkowow-CodeAndData-studynote-1/" itemprop="url">Gentzkowow_CodeAndData_studynote(1)</a></h1>
+                <a class="post-title-link" href="/2018/12/31/Gentzkowow-CodeAndData-studynote-1/" itemprop="url">Gentzkow_CodeAndData_studynote(1)</a></h1>
         
 
         <div class="post-meta">
@@ -300,7 +490,7 @@
       
         
           
-            <p><strong>这是 *</strong>Matthew Gentzkow<strong><em> 的 </em></strong>Code and Data for the Social Sciences:A Practitioner’s Guide<strong>* 的学习笔记，全书共有8节，介绍了实证分析中数据处理常见的问题和建议。</strong></p>
+            <p><strong>这是 <em>Matthew Gentzkow</em>的<em>Code and Data for the Social Sciences:A Practitioner’s Guide</em> 的学习笔记，全书共有8节，介绍了实证分析中数据处理常见的问题和建议。</strong></p>
 <p>原书网盘地址：<a href="https://pan.baidu.com/s/1ceF0REHAi77D2oVdFHu-xA" title="原书地址" target="_blank" rel="noopener">链接</a> </p>
 <p>提取码：r6f2 </p>
 <p>#Chapter1  Introduction</p>
@@ -1517,7 +1707,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
