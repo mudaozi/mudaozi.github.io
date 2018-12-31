@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="说明：这是连玉君老师2018年Stata寒假班讲义基础部分的学习笔记，利用空闲回顾、连载和记笔记。 #一、简介 简介部分命令较为常见，没有详细地介绍使用，不清楚的可以使用 help 查看学习。  ##实证分析的流程 1.一个想法：研究假设  2.模型界定  3.变量界定  4.收集数据  5.数据清洗、生成变量  6.统计和回归分析  7.支持——&amp;gt; 8 | 不支持 --&amp;gt; 1-7">
+<meta name="description" content="前两日对连玉君老师寒假班讲义基础班中的基础命令进行了复习，接下来几日将学习基本回归分析的内容，包括基本回归操作和回归结果的导出。 基本回归分析 1234567891011sysuse &amp;quot;nlsw88&amp;quot;,clearglobal y &amp;quot;wage&amp;quot;  //存放被解释变量的全局暂元global x &amp;quot;hours tenure married collgra">
 <meta name="keywords" content="Stata">
 <meta property="og:type" content="article">
-<meta property="og:title" content="连玉君2018年寒假班讲义基础部分笔记（一）">
-<meta property="og:url" content="http://yoursite.com/2018/12/24/连玉君2018年寒假班讲义基础部分笔记（一）/index.html">
+<meta property="og:title" content="连玉君2018年寒假班讲义基础部分笔记（三）">
+<meta property="og:url" content="http://yoursite.com/2018/12/26/连玉君2018年寒假班讲义基础部分笔记（三）/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="说明：这是连玉君老师2018年Stata寒假班讲义基础部分的学习笔记，利用空闲回顾、连载和记笔记。 #一、简介 简介部分命令较为常见，没有详细地介绍使用，不清楚的可以使用 help 查看学习。  ##实证分析的流程 1.一个想法：研究假设  2.模型界定  3.变量界定  4.收集数据  5.数据清洗、生成变量  6.统计和回归分析  7.支持——&amp;gt; 8 | 不支持 --&amp;gt; 1-7">
+<meta property="og:description" content="前两日对连玉君老师寒假班讲义基础班中的基础命令进行了复习，接下来几日将学习基本回归分析的内容，包括基本回归操作和回归结果的导出。 基本回归分析 1234567891011sysuse &amp;quot;nlsw88&amp;quot;,clearglobal y &amp;quot;wage&amp;quot;  //存放被解释变量的全局暂元global x &amp;quot;hours tenure married collgra">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-24T15:08:27.748Z">
+<meta property="og:updated_time" content="2018-12-27T14:45:16.916Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="连玉君2018年寒假班讲义基础部分笔记（一）">
-<meta name="twitter:description" content="说明：这是连玉君老师2018年Stata寒假班讲义基础部分的学习笔记，利用空闲回顾、连载和记笔记。 #一、简介 简介部分命令较为常见，没有详细地介绍使用，不清楚的可以使用 help 查看学习。  ##实证分析的流程 1.一个想法：研究假设  2.模型界定  3.变量界定  4.收集数据  5.数据清洗、生成变量  6.统计和回归分析  7.支持——&amp;gt; 8 | 不支持 --&amp;gt; 1-7">
+<meta name="twitter:title" content="连玉君2018年寒假班讲义基础部分笔记（三）">
+<meta name="twitter:description" content="前两日对连玉君老师寒假班讲义基础班中的基础命令进行了复习，接下来几日将学习基本回归分析的内容，包括基本回归操作和回归结果的导出。 基本回归分析 1234567891011sysuse &amp;quot;nlsw88&amp;quot;,clearglobal y &amp;quot;wage&amp;quot;  //存放被解释变量的全局暂元global x &amp;quot;hours tenure married collgra">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/24/连玉君2018年寒假班讲义基础部分笔记（一）/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/26/连玉君2018年寒假班讲义基础部分笔记（三）/">
 
 
 
 
 
-  <title>连玉君2018年寒假班讲义基础部分笔记（一） | Hexo</title>
+  <title>连玉君2018年寒假班讲义基础部分笔记（三） | Hexo</title>
   
 
 
@@ -233,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/24/连玉君2018年寒假班讲义基础部分笔记（一）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/26/连玉君2018年寒假班讲义基础部分笔记（三）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -250,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">连玉君2018年寒假班讲义基础部分笔记（一）</h1>
+          <h1 class="post-title" itemprop="name headline">连玉君2018年寒假班讲义基础部分笔记（三）</h1>
         
 
         <div class="post-meta">
@@ -262,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-24T22:51:30+08:00">
-                2018-12-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-26T22:28:52+08:00">
+                2018-12-26
               </time>
             
 
@@ -300,64 +300,14 @@
       
 
       
-        <p><strong><em>说明：这是连玉君老师2018年Stata寒假班讲义基础部分的学习笔记，利用空闲回顾、连载和记笔记。</em></strong></p>
-<p>#一、简介</p>
-<p>简介部分命令较为常见，没有详细地介绍使用，不清楚的可以使用 <em>help</em> 查看学习。</p>
-<hr>
-<p>##实证分析的流程</p>
-<pre><code>1.一个想法：研究假设
-
-2.模型界定
-
-3.变量界定
-
-4.收集数据
-
-5.数据清洗、生成变量
-
-6.统计和回归分析
-
-7.支持——&gt; 8 | 不支持 --&gt; 1-7
-
-8.解释结果、结论
-</code></pre><p>##用Stata画韦恩图</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">   sysuse &quot;nlsw88&quot;,clear</span><br><span class="line">   </span><br><span class="line">   pvenn married collgrad south</span><br><span class="line"></span><br><span class="line">*Also see</span><br><span class="line">   </span><br><span class="line">   help venndiag</span><br><span class="line">   </span><br><span class="line">   venndiag married collgrad south</span><br></pre></td></tr></table></figure>
-<p>##一些最基本的命名</p>
-<p>连老师这个部分介绍了常用的基本命令。分如下几方面：</p>
-<p>查看最新的命名</p>
-<p><code>help whatsnew</code></p>
-<p><strong>1.帮助文件和外部命令</strong></p>
-<p><em>help</em>、<em>findit</em></p>
-<p><strong>2.文件路径和设置</strong> </p>
-<p><em>pwd</em>、<em>cd</em>、<em>dir</em>、<em>sysdir</em>、<em>adopath</em></p>
-<p><strong>3.调入和导出数据</strong></p>
-<ul>
-<li><p>调入：<em>use</em>、<em>sysuse</em>、<em>import</em></p>
-</li>
-<li><p>导出：<em>export</em>…</p>
-</li>
-</ul>
-<ul>
-<li><em>调入和导出数据的示例</em></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">use &quot;fullauto.dta&quot;, clear    //调入Stata格式的数据(当前路径下,相对路径)</span><br><span class="line"></span><br><span class="line">use &quot;D:\stata15\ado\personal\PX_A_2018a\A1_intro\fullauto.dta&quot;, clear  //调入数据，绝对路径</span><br><span class="line"></span><br><span class="line">sysuse &quot;auto&quot;, clear         //调入Stata自带数据文件</span><br><span class="line"></span><br><span class="line">shellout &quot;auto.xls&quot;          //打开文件,要写全后缀</span><br><span class="line"></span><br><span class="line">import excel &quot;auto.xls&quot;, sheet(domestic) firstrow clear   //导入Excel数据</span><br><span class="line"></span><br><span class="line">save &quot;mydata.dta&quot;, replace //保存数据, also see [help saveold]</span><br></pre></td></tr></table></figure>
-<ul>
-<li><em>一个从网页上下载资料的示例</em></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">local address http://quotes.money.163.com/service/chddata.html  //数据地址</span><br><span class="line"></span><br><span class="line">local field TCLOSE;HIGH;LOW;TOPEN;LCLOSE;CHG;PCHG;TURNOVER;VOTURNOVER;VATURNOVER;TCAP;MCAP  //下载的指标</span><br><span class="line"></span><br><span class="line">local name = 300398	//飞凯材料  公司名称</span><br><span class="line"></span><br><span class="line">copy &quot;`address&apos;?code=1`name&apos;&amp;fields=`field&apos;\\`name&apos;.csv&quot;  s`name&apos;.csv, replace  //copy命令下载</span><br><span class="line"></span><br><span class="line">insheet using &quot;`address&apos;?code=1`name&apos;&amp;fields=`field&apos;\\`name&apos;.csv&quot;, clear  //导入数据</span><br><span class="line"></span><br><span class="line">shellout &quot;s300398.csv&quot;   //保存为csv文件</span><br></pre></td></tr></table></figure>
-<p><strong>注：上面的示例其实就是用Stata完成一个小小爬虫的例子，如果在公司股票代码的地方套入循环，就可以抓取多个公司的数据。</strong></p>
-<p><strong>4.编辑和浏览数据</strong></p>
-<p><em>edit</em>、<em>browse</em>、<em>format</em></p>
-<p><strong>5.增、删、修、改变量</strong></p>
-<p><em>gen</em>、<em>label</em>、<em>rename</em>、<em>replace</em>、<em>drop</em></p>
-<p><strong>6.基本统计量</strong></p>
-<p><em>des</em>、<em>summarize</em>、<em>codebook</em>、<em>compress</em></p>
-<p>一个好用的外部命令，用来更简洁的查看描述性统计结果。</p>
-<p><code>ssc install fsum</code></p>
-<p><strong>7.列示和屏幕显示</strong></p>
-<p><em>sort</em>、<em>rsort</em>、<em>gsort</em>、<em>display</em>、<em>list</em>、<em>clear</em></p>
-<p><code>review # //显示显示在command窗口中新近输入的#（数字）条命令</code></p>
-<p><code>cls //清屏, Clear Results window, New in stata15</code></p>
+        <p><em>前两日对连玉君老师寒假班讲义基础班中的基础命令进行了复习，接下来几日将学习基本回归分析的内容，包括基本回归操作和回归结果的导出。</em></p>
+<p><strong>基本回归分析</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sysuse &quot;nlsw88&quot;,clear</span><br><span class="line"></span><br><span class="line">global y &quot;wage&quot;  //存放被解释变量的全局暂元</span><br><span class="line">global x &quot;hours tenure married collgrad&quot; //存放解释变量的全局暂元 </span><br><span class="line"></span><br><span class="line">*去除缺漏值</span><br><span class="line"></span><br><span class="line">qui reg $y $x i.race i.industry i.occupation </span><br><span class="line"></span><br><span class="line">keep if e(sample)</span><br></pre></td></tr></table></figure>
+<p>这是连老师在本章开头给的一个例子，有四处值得注意：</p>
+<p>1.将解释变量和被解释变量定义为全局暂元，这样方便以后万一模型中变量需要修改，只需要修改这一处就好了，不用每一个回归命令都修改。全局暂元和暂元在稍微大一点的do文档中非常方便，让do文档美观高效。具体的情况，可以 <strong><em><code>help macro</code></em></strong>查阅。</p>
+<p>2.<code>qui</code>完整的命令为<code>quite</code>,表示“悄悄地”运行命令，不在result窗口报告结果。</p>
+<p>3.<code>i.race</code>表示直接在回归中使用虚拟变量，比如<code>reg wage i.race</code>就是针对不同的<code>race</code>组进行回归，默认采用第一组为基础组，可以使用<code>ib#</code>设置基础组。可以查看<code>help fvvarlist</code><br>这里有一篇连玉君老师的文章<a href="https://www.jianshu.com/p/16b08797e591" title="Stata：因子变量的全攻略" target="_blank" rel="noopener">Stata：因子变量的全攻略</a>。<strong>（后面打算专门写一篇文章细说）</strong></p>
+<p>4.<code>if e(sample)</code>等价于<code>if e(sample) == 1</code>,而<code>help e(sample)</code>可以发现，<code>e(sample)</code>等于1时表示在上一个回归中的样本，所以<code>if e(sample)</code>可以缩减样本。</p>
 
       
     </div>
@@ -388,8 +338,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/24/Markdown基础语法学习笔记/" rel="next" title="Markdown基础语法学习笔记">
-                <i class="fa fa-chevron-left"></i> Markdown基础语法学习笔记
+              <a href="/2018/12/25/连玉君2018年寒假班讲义学习笔记（二）/" rel="next" title="连玉君2018年寒假班讲义基础部分笔记（二）">
+                <i class="fa fa-chevron-left"></i> 连玉君2018年寒假班讲义基础部分笔记（二）
               </a>
             
           </div>
@@ -398,8 +348,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/25/连玉君2018年寒假班讲义学习笔记（二）/" rel="prev" title="连玉君2018年寒假班讲义基础部分笔记（二）">
-                连玉君2018年寒假班讲义基础部分笔记（二） <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/26/连玉君2018寒假班讲义基础部分笔记（三）/" rel="prev" title="连玉君2018寒假班讲义基础部分笔记（三）">
+                连玉君2018寒假班讲义基础部分笔记（三） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
