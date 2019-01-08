@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/09/“【Stata的博客】文章列表/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/09/Stata爬取博客文章列表并存为Markdown链接/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -248,7 +248,131 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/01/09/“【Stata的博客】文章列表/" itemprop="url">【Stata的博客】文章列表</a></h1>
+                <a class="post-title-link" href="/2019/01/09/Stata爬取博客文章列表并存为Markdown链接/" itemprop="url">Stata爬取博客文章列表并存为Markdown链接</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-09T02:11:56+08:00">
+                2019-01-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><em>这是用Stata写的简单爬虫，爬【Stata的博客】文章列表，便于学习浏览，侵删。</em>   </p>
+<p>原博客地址：<a href="http://blog.sina.com.cn/s/articlelist_1654372184_0_1.html" target="_blank" rel="noopener">Stata博客</a> </p>
+<p>爬下来的结果：<a href="https://mudaozi.github.io/2019/01/09/%E2%80%9C%E3%80%90Stata%E7%9A%84%E5%8D%9A%E5%AE%A2%E3%80%91%E6%96%87%E7%AB%A0%E5%88%97%E8%A1%A8/" target="_blank" rel="noopener">文章列表</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">*爬取网页 </span><br><span class="line">       </span><br><span class="line">cd &quot;C:\\...&quot;  </span><br><span class="line">  </span><br><span class="line">forvalues i = 1/4&#123;   </span><br><span class="line"> </span><br><span class="line">copy &quot;http://blog.sina.com.cn/s/articlelist_1654372184_0_`i&apos;.html&quot; &quot;StataBlogList.txt&quot;,replace    </span><br><span class="line">         </span><br><span class="line">*将网页 txt 文档读入 Stata  </span><br><span class="line">   </span><br><span class="line">infix strL var 1-3000 using &quot;StataBlogList.txt&quot;, clear  </span><br><span class="line"></span><br><span class="line">*去除无用 codes, 保留所需代码 </span><br><span class="line">    </span><br><span class="line">format var %-600s  </span><br><span class="line"> </span><br><span class="line">keep if strmatch(var, `&quot;*&lt;a title=&quot;&quot; target=&quot;_blank&quot; href=&quot;http://blog.sina.com.cn/s*&quot;&apos;)  </span><br><span class="line"> </span><br><span class="line">replace var=subinstr(var,`&quot;&lt;a title=&quot;&quot; target=&quot;_blank&quot; &quot;&apos;,&quot;&quot;,.)</span><br><span class="line"></span><br><span class="line">replace var=subinstr(var,`&quot;&amp;nbsp;&quot;&apos;,&quot;&quot;,.)</span><br><span class="line"></span><br><span class="line">replace var=subinstr(var,`&quot;&lt;/a&gt;&lt;/span&gt;&quot;&apos;,&quot;&quot;,.)</span><br><span class="line"></span><br><span class="line">replace var=subinstr(var,`&quot;href=&quot;.*?&quot;&quot;&apos;,&quot;&quot;,.)</span><br><span class="line"></span><br><span class="line">save &quot;page`i&apos;.dta&quot;,replace </span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">*转成 Markdown 链接语句  </span><br><span class="line">   </span><br><span class="line">openall  </span><br><span class="line"> </span><br><span class="line">save StataBlogList.dta,replace </span><br><span class="line"> </span><br><span class="line">split var, parse(&gt;) </span><br><span class="line"> </span><br><span class="line">keep var1 var2 </span><br><span class="line"> </span><br><span class="line">rename (var1 var2) (url title)  </span><br><span class="line"></span><br><span class="line">order title url</span><br><span class="line"></span><br><span class="line">replace title = &quot;[&quot; + title + &quot;]&quot;  </span><br><span class="line"></span><br><span class="line">replace url = subinstr(url,`&quot;href=&quot;&quot;&apos;,&quot;(&quot;,.) </span><br><span class="line"> </span><br><span class="line">replace url = subinstr(url,`&quot;&quot;&quot;&apos;,&quot;)&quot;,.)  </span><br><span class="line"></span><br><span class="line">gen v = title+url + &quot;  &quot;  </span><br><span class="line"></span><br><span class="line">format v %-300s   </span><br><span class="line"></span><br><span class="line">keep v</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">*排序，输出处理好的 txt 文本，并直接打开 txt 文档  </span><br><span class="line"> </span><br><span class="line">gen num = real(ustrregexs(1)) if ustrregexm(v,&quot;Tips(.*?):&quot;) </span><br><span class="line"> </span><br><span class="line">sort num  </span><br><span class="line"></span><br><span class="line">drop num </span><br><span class="line"> </span><br><span class="line">export delimited using &quot;StataBlogList_out.txt&quot;, novar nolabel replace  </span><br><span class="line"></span><br><span class="line">shellout &quot;StataBlogList_out.txt&quot;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/09/【Stata的博客】文章列表/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/09/【Stata的博客】文章列表/" itemprop="url">【Stata的博客】文章列表</a></h1>
         
 
         <div class="post-meta">
@@ -1513,7 +1637,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1526,7 +1650,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
